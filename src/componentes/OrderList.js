@@ -1,5 +1,6 @@
 import React from 'react'
 import OrderItem from './OrderItem'
+import './css/OrderList.css'
 
 const OrderList = (order) => {
   order = {
@@ -13,11 +14,11 @@ const OrderList = (order) => {
 
   return (
     <section className="col-6">
-      <h2>Tu pedido</h2>
-      <h3>Menu {order.type}</h3>
-      <table>
+      <h2 className="text-center">Tu pedido</h2>
+      <h3 className="text-center">Menu {order.type}</h3>
+      <table className="orderTable w-100">
         <thead>
-          <tr>
+          <tr className="text-center text-uppercase font-weight-light">
             <th>Items</th>
             <th>Cantidad</th>
             <th>A pagar</th>
