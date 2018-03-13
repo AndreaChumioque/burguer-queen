@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react'
 import './css/Header.css'
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="container-fluid">
-        <div className="row">
-          <div className="col-12">
-            <h1 id="logo"><img src="assets/logo-2.png" width="100" /> </h1>
-          </div>
+const Header = () => {
+  return (
+    <header className="container-fluid">
+      <div className="row">
+        <div className="col-12">
+          <h1 id="logo" className="text-center m-2"><img src="assets/logo-2.png" width="150" alt="Burger Queen" /> </h1>
         </div>
-      </header>
-    );
-  }
+      </div>
+    </header>
+  )
 }
 
-export default Header;
+export default Header
