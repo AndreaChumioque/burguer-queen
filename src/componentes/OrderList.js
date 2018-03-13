@@ -1,4 +1,5 @@
 import React from 'react'
+import OrderItem from './OrderItem'
 
 const OrderList = (order) => {
   order = {
@@ -18,20 +19,11 @@ const OrderList = (order) => {
         <thead>
           <tr>
             <th>Items</th>
-            <th>Precio u.</th>
             <th>Cantidad</th>
+            <th>A pagar</th>
           </tr>
         </thead>
-        <tbody>
-          {order.orderedItems.map(item => 
-          <tr key={item.product}>
-            <td>{item.product}</td>
-            <td>{item.price}</td>
-            <td>{item.price * item.qty}</td>
-            <td><i className="far fa-times-circle"></i></td>
-          </tr>
-          )}
-        </tbody>
+        <OrderItem items={order.orderedItems} />
       </table>
     </section>
   )
