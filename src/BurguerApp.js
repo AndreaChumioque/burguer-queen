@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
-import Header from './componentes/Header'
+import React from 'react';
+import Header from './componentes/Header';
+import Menu from './componentes/Menu';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
+const App = () => {
+  return (
+    <div>
       <Header />
-    );
-  }
+      <Menu />
+    </div>
+  );
 }
 
 export default App;
